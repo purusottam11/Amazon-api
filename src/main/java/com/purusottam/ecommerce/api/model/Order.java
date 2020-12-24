@@ -6,22 +6,32 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import javax.persistence.*;
+import java.io.Serializable;
+import java.time.Instant;
 
-@Entity
-@Table
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class CartSummary {
+@Entity
+@Table
+public class Order implements Serializable {
+
+    enum Status {
+        PLACED,
+        DELIVERED,
+        EXCHANGED,
+        RETURNED,
+        CANCELLED
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private Long cartId;
+    private Long userId;
     private Long productId;
     private Long addressId;
-    private Integer retailPrice;
-    private Integer quantity;
+    private Instant timestamp;
+    private Status status;
 
 }

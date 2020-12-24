@@ -6,22 +6,22 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
-@Entity
-@Table
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class CartSummary {
+@Entity
+@Table
+public class Address implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private Long cartId;
-    private Long productId;
-    private Long addressId;
-    private Integer retailPrice;
-    private Integer quantity;
+    private String name;
+    private Long pinCode;
+    private String landmarks;
+    private Long userId;
 
 }

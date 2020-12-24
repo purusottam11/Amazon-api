@@ -38,9 +38,6 @@ public class Product {
     @Column(name = "discounted_price")
     private Integer discountedPrice;
 
-    @Column(name = "image")
-    private String image;
-
     @Column(name = "is_FK_Advantage_product")
     private String isFKAdvantageProduct;
 
