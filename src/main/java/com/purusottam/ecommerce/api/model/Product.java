@@ -1,8 +1,10 @@
 package com.purusottam.ecommerce.api.model;
 
+
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.UUID;
 
 @Entity
 @Getter
@@ -38,9 +40,14 @@ public class Product {
     @Column(name = "discounted_price")
     private Integer discountedPrice;
 
+    @Lob
+    @Column(name = "image")
+    private String image;
+
     @Column(name = "is_FK_Advantage_product")
     private String isFKAdvantageProduct;
 
+    @Lob
     @Column(name = "description")
     private String description;
 
@@ -49,8 +56,10 @@ public class Product {
 
     @Column(name = "overall_rating")
     private String overallRating;
-
+    
     @Column(name = "brand")
     private String brand;
 
+
 }
+

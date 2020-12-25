@@ -17,12 +17,19 @@ import java.time.Instant;
 @Table
 public class Order implements Serializable {
 
-    enum Status {
-        PLACED,
-        DELIVERED,
-        EXCHANGED,
-        RETURNED,
-        CANCELLED
+
+    public enum Status {
+        PLACED("Placed"), DELIVERED("Delivered"), EXCHANGED("Exchanged"),RETURNED("Return"),CANCELLED("Cancel");
+
+        private String label;
+
+        private Status(String label) {
+            this.label = label;
+        }
+
+        public String getLabel() {
+            return label;
+        }
     }
 
     @Id
@@ -32,6 +39,6 @@ public class Order implements Serializable {
     private Long productId;
     private Long addressId;
     private Instant timestamp;
-    private Status status;
+    private String status;
 
 }
