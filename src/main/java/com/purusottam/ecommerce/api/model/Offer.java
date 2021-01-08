@@ -2,10 +2,12 @@ package com.purusottam.ecommerce.api.model;
 
 
 import lombok.*;
+import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.Instant;
+import java.util.UUID;
 
 @Entity
 @Table
@@ -13,15 +15,16 @@ import java.time.Instant;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-@Getter
-@Setter
+@Builder
 public class Offer implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
-    private Long categoryId;
-    private Long productId;
+    @GeneratedValue(generator = "uuid2")
+    @GenericGenerator(name = "uuid2", strategy = "uuid2")
+    @Column(columnDefinition = "BINARY(16)")
+    private UUID id;
+    private UUID categoryId;
+    private UUID productId;
     private Double percentage;
     private Instant timestamp;
 

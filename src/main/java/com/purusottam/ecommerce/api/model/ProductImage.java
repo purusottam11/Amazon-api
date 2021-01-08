@@ -1,22 +1,27 @@
 package com.purusottam.ecommerce.api.model;
 
 import lombok.*;
+import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-import java.io.Serializable;
+import java.util.UUID;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString
-@Entity
 @Table
-public class ProductImage implements Serializable {
-
+@Entity
+@ToString
+@Builder
+public class ProductImage {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
-    private String imageUrl;
-    private Long productId;
+    @GeneratedValue(generator = "uuid2")
+    @GenericGenerator(name = "uuid2", strategy = "uuid2")
+    @Column(columnDefinition = "BINARY(16)")
+    private UUID id;
+
+    private String url;
+
+    private UUID productId;
 
 }
