@@ -2,10 +2,9 @@ package com.purusottam.ecommerce.api.model;
 
 
 import lombok.*;
-import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-import java.util.UUID;
+import java.time.Instant;
 
 @Entity
 @AllArgsConstructor
@@ -13,16 +12,16 @@ import java.util.UUID;
 @ToString
 @Builder
 @Table
+@Getter
+@Setter
 public class Product {
 
     @Id
-    @GeneratedValue(generator = "uuid2")
-    @GenericGenerator(name = "uuid2", strategy = "uuid2")
-    @Column(columnDefinition = "BINARY(16)")
-    private UUID id;
+    @GeneratedValue(strategy =GenerationType.AUTO)
+    private Long id;
 
     @Column(name = "crawl_timestamp")
-    private String crawlTimestamp;
+    private Instant crawlTimestamp;
 
     @Column(name = "product_url")
     private String productUrl;
@@ -31,7 +30,7 @@ public class Product {
     private String productName;
 
     @Column(name = "category")
-    private UUID category;
+    private Long category;
 
     @Column(name = "pid")
     private String pid;

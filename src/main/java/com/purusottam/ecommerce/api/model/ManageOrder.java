@@ -1,12 +1,10 @@
 package com.purusottam.ecommerce.api.model;
 
 import lombok.*;
-import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.Instant;
-import java.util.UUID;
 
 @Data
 @AllArgsConstructor
@@ -18,12 +16,10 @@ import java.util.UUID;
 public class ManageOrder implements Serializable {
 
     @Id
-    @GeneratedValue(generator = "uuid2")
-    @GenericGenerator(name = "uuid2", strategy = "uuid2")
-    @Column(columnDefinition = "BINARY(16)")
-    private UUID id;
-    private UUID cartId;
-    private UUID userId;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+    private Long cartId;
+    private Long userId;
     private Instant timestamp;
 
 }

@@ -16,13 +16,11 @@ import java.util.UUID;
 public class CartSummary {
 
     @Id
-    @GeneratedValue(generator = "uuid2")
-    @GenericGenerator(name = "uuid2", strategy = "uuid2")
-    @Column(columnDefinition = "BINARY(16)")
-    private UUID id;
-    private UUID cartId;
-    private UUID productId;
-    private UUID addressId;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+    private Long cartId;
+    private Long productId;
+    private Long addressId;
     private Integer retailPrice;
     private Integer quantity;
 
