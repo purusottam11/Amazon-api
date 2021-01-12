@@ -2,10 +2,8 @@ package com.purusottam.ecommerce.api.model;
 
 
 import lombok.*;
-import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-import java.util.UUID;
 
 @Entity
 @Table
@@ -17,10 +15,8 @@ import java.util.UUID;
 public class User {
 
     @Id
-    @GeneratedValue(generator = "uuid2")
-    @GenericGenerator(name = "uuid2", strategy = "uuid2")
-    @Column(columnDefinition = "BINARY(16)")
-    private UUID id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
 
     private String userName;
 
