@@ -13,7 +13,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @ToString
 @Builder
-public class RawProducts {
+public class RawProduct {
 
     @Id
     private String uniq_id;

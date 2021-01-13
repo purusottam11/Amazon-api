@@ -11,7 +11,7 @@ import java.time.Instant;
 @NoArgsConstructor
 @ToString
 @Entity
-@Table
+@Table(name = "manage_order_tb")
 @Builder
 public class ManageOrder implements Serializable {
 

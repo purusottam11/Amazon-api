@@ -9,7 +9,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @ToString
 @Entity
-@Table(name = "ProductReview")
+@Table(name = "product_review_tb")
 @Builder
 public class ProductReview {
 
