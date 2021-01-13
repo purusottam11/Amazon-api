@@ -7,7 +7,7 @@ import javax.persistence.*;
 import java.util.UUID;
 
 @Entity
-@Table
+@Table(name = "cart_summary_tb")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

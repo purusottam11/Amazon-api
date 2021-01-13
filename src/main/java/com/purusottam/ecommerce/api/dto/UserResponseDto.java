@@ -1,23 +1,14 @@
-package com.purusottam.ecommerce.api.model;
-
+package com.purusottam.ecommerce.api.dto;
 
 import lombok.*;
 
-import javax.persistence.*;
-
-@Entity
-@Table(name = "user_tb")
 @Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-@Builder
-public class User {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
-
+public class UserResponseDto {
     private String userName;
 
     private String firstName;
@@ -31,5 +22,4 @@ public class User {
     private Long alternativeNumber;
 
     private String email;
-
 }

@@ -15,3 +15,16 @@ CREATE TABLE product(
 	brand VARCHAR(255),
 	Product_specifications VARCHAR(10000)
     );
+
+    CREATE TABLE raw_product(
+        uniq_id VARCHAR(255),
+    	product_url VARCHAR(1000),
+    	product_name VARCHAR(255),
+    	product_category_tree VARCHAR(1000),
+    	pid VARCHAR(255),
+    	retail_price INT,
+    	image VARCHAR(2000),
+    	description text,
+    	brand VARCHAR(255),
+        PRIMARY KEY (uniq_id)
+        );

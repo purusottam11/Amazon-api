@@ -7,7 +7,7 @@ import javax.persistence.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table
+@Table(name = "product_image_tb")
 @Entity
 @ToString
 @Builder

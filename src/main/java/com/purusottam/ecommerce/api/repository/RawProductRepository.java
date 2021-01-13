@@ -1,10 +1,10 @@
 package com.purusottam.ecommerce.api.repository;
 
-import com.purusottam.ecommerce.api.model.RawProducts;
+import com.purusottam.ecommerce.api.model.RawProduct;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface RawProductRepository extends JpaRepository<RawProducts, String> {
+public interface RawProductRepository extends JpaRepository<RawProduct, String> {
 
-    RawProducts findByBrand(String brand);
+    RawProduct findByBrand(String brand);
 
 }

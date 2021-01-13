@@ -3,7 +3,6 @@ package com.purusottam.ecommerce.api.model;
 import lombok.*;
 
 import javax.persistence.*;
-import java.io.Serializable;
 import java.time.Instant;
 
 @Data
@@ -11,9 +10,9 @@ import java.time.Instant;
 @NoArgsConstructor
 @ToString
 @Entity
-@Table
+@Table(name = "order_tb")
 @Builder
-public class Order implements Serializable {
+public class Order {
 
 
     public enum Status {

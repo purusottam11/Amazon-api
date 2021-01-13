@@ -11,7 +11,7 @@ import java.time.Instant;
 @NoArgsConstructor
 @ToString
 @Builder
-@Table
+@Table(name = "product_tb")
 @Getter
 @Setter
 public class Product {

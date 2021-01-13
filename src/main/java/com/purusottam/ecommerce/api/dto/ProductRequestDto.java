@@ -1,4 +1,4 @@
-package com.purusottam.ecommerce.api.bean;
+package com.purusottam.ecommerce.api.dto;
 
 
 import lombok.AllArgsConstructor;
@@ -12,7 +12,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class ProductRequestBean {
+public class ProductRequestDto {
 
     private String productUrl;
 

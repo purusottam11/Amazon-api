@@ -2,14 +2,13 @@ package com.purusottam.ecommerce.api.model;
 
 
 import lombok.*;
-import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.Instant;
 
 @Entity
-@Table
+@Table(name = "offer_tb")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
