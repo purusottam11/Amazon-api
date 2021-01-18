@@ -4,7 +4,6 @@ package com.purusottam.ecommerce.api.model;
 import lombok.*;
 
 import javax.persistence.*;
-import java.time.Instant;
 
 @Entity
 @AllArgsConstructor
@@ -19,9 +18,6 @@ public class Product {
     @Id
     @GeneratedValue(strategy =GenerationType.AUTO)
     private Long id;
-
-    @Column(name = "crawl_timestamp")
-    private Instant crawlTimestamp;
 
     @Column(name = "product_url")
     private String productUrl;

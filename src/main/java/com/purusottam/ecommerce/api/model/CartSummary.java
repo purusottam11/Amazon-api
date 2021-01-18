@@ -1,10 +1,8 @@
 package com.purusottam.ecommerce.api.model;
 
 import lombok.*;
-import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-import java.util.UUID;
 
 @Entity
 @Table(name = "cart_summary_tb")
