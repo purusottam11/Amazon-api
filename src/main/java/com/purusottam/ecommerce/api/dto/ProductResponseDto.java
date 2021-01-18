@@ -1,8 +1,6 @@
 package com.purusottam.ecommerce.api.dto;
 
-
 import lombok.*;
-
 
 @Data
 @AllArgsConstructor
@@ -10,8 +8,7 @@ import lombok.*;
 @ToString
 @Getter
 @Setter
-public class ProductRequestDto {
-
+public class ProductResponseDto {
     private String productUrl;
 
     private String productName;
@@ -25,5 +22,4 @@ public class ProductRequestDto {
     private String description;
 
     private String brand;
-
 }
